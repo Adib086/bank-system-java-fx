@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.GlyphsStack?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../Styles/Login.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ahhar.Controller.LoginController">
+   <VBox prefHeight="500.0" prefWidth="220.0" styleClass="login_container">
+      <children>
+         <FontAwesomeIconView glyphName="BANK" size="30"/>
+         <GlyphsStack/>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bank System"/>
+      </children>
+   </VBox>
+   <VBox layoutX="242.0" layoutY="16.0" prefHeight="462.0" prefWidth="434.0" styleClass="login_form_container">
+      <Label id="choice-prompt-text" text="Cosse your account type">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Label>
+      <ChoiceBox fx:id="acc_selector" prefHeight="31.0" prefWidth="150.0" styleClass="account_selector"/>
+      <Label fx:id="acc_lbl" text="Account Number">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="acc_num" prefHeight="30.0" prefWidth="434.0" styleClass="input_field"/>
+      <Label fx:id="pass_lbl" text="Password">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="pass_fld" prefHeight="31.0" prefWidth="434.0" styleClass="input_field"/>
+      <Button fx:id="login_btn" mnemonicParsing="false" prefHeight="32.0" prefWidth="468.0" text="Login">
+         <VBox.margin>
+            <Insets top="31.0"/>
+         </VBox.margin>
+      </Button>
+      <Label fx:id="eroor_lbl" prefHeight="25.0" prefWidth="47.0" styleClass="error_lbl" />
+   </VBox>
+</AnchorPane>
